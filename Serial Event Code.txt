@@ -1,0 +1,15 @@
+// Serial Event (JMS)
+//
+int sensorValue=0; // Set initial value to 0
+void setup()
+{
+  pinMode(A0,INPUT); // Initialize pin A0 as an INPUT
+  Serial.begin(9600); // Initialize the serial monitor
+}
+
+void loop()
+{
+  sensorValue=analogRead(A0); // Assign sensorValue to A0
+  Serial.println(sensorValue); // Print to serial monitor
+  delay(10); // Wait for 10 millisecond(s)
+}
